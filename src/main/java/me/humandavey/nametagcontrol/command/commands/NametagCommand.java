@@ -21,7 +21,7 @@ public class NametagCommand extends Command {
 	private Menu menu;
 
 	public NametagCommand() {
-		super("nametag", null, "Set, remove, and change a player's nametag!");
+		super("nametag", new String[]{"nametags"}, "Set, remove, and change a player's nametag!");
 
 		ArrayList<ItemStack> heads = new ArrayList<>();
 		for (Player player : Bukkit.getOnlinePlayers()) {
@@ -42,12 +42,11 @@ public class NametagCommand extends Command {
 	public void execute(Player player, String[] args) {
 		if (player.hasPermission(NametagControl.getInstance().getConfig().getString("permission"))) {
 			if (args.length == 0) {
-				player.sendMessage(Util.colorize("&cInvalid Usage: /nametag <menu|prefix|color|suffix> <player> [text]"));
+				menu.open(player);
 				return;
 			}
-			if (args.length == 1 && args[0].equalsIgnoreCase("menu")) {
-				menu.open(player);
-				player.sendMessage("open menu");
+			if (args.length == 1 && args[0].equalsIgnoreCase("help")) {
+				player.sendMessage(Util.colorize("&cInvalid Usage: /nametag <prefix|color|suffix> <player> [text]"));
 				return;
 			}
 
