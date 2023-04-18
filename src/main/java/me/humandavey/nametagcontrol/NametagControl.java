@@ -1,12 +1,12 @@
-package me.humandavey.template;
+package me.humandavey.nametagcontrol;
 
-import me.humandavey.template.command.commands.ExampleCommand;
-import me.humandavey.template.nametag.NametagManager;
+import me.humandavey.nametagcontrol.command.commands.NametagCommand;
+import me.humandavey.nametagcontrol.nametag.NametagManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Template extends JavaPlugin {
+public final class NametagControl extends JavaPlugin {
 
-	private static Template instance;
+	private static NametagControl instance;
 
 	@Override
 	public void onEnable() {
@@ -37,10 +37,10 @@ public final class Template extends JavaPlugin {
 	}
 
 	private void registerCommands() {
-		new ExampleCommand();
+		new NametagCommand();
 	}
 
-	public static Template getInstance() {
+	public static NametagControl getInstance() {
 		return instance;
 	}
 }

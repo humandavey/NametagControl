@@ -1,4 +1,4 @@
-package me.humandavey.template.scoreboard;
+package me.humandavey.nametagcontrol.scoreboard;
 
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;

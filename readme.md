@@ -1,13 +1,11 @@
-# Template [humandavey]
+# NametagControl [humandavey]
 
-This is a template project for spigot plugins
+A plugin that you can control nametags with to add prefixes and suffixes
 
 ## Features
 
-- Useful methods in `Util` class
-- `ItemBuilder` class for easy item creation
-- Entire menu system as well as paged menus
-- Command handler with easy tab completion
+- Easy menu to change prefixes
+- Sign editor to change names
 
 ## Support
 

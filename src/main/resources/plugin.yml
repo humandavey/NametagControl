@@ -1,5 +1,5 @@
-name: Template
+name: NametagControl
 version: '${project.version}'
-main: me.humandavey.template.Template
+main: me.humandavey.nametagcontrol.NametagControl
 api-version: 1.19
 authors: [ humandavey ]
